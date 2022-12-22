@@ -6,9 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping site in India: Shop online for Mobile, Books, Laptops, Watches, Clothes etc. </title>
     <link href="images_folder/amazonicon.png" rel="amazon icon"/>
+    
+    <style>
+    body{
+    padding:0% 3% 10% 3%;
+    text-align:center;
+    }
+    h1{
+    color: #32a852;
+    margin-top:30px;
+    }
+ 
+    button{
+        cursor: pointer;
+        border: 1px solid #555;
+        text-align: center;
+        padding: 5px;
+        margin-left: 8px;
+    }
+    .dark{
+        background-color: #222;
+        color: #e6e6e6;
+    }
+</style>
 </head>
 <body>
     <div style="background-color: black; height: 90px;">
+        
+        <button onclick="myFunction()">Switch mode</button>
+         
+        <script>
+            function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark");
+            }
+        </script>
+        
         <a href="">
             <img src = "images_folder/amazonpic.jpg" height = "50px" width = "100px"/>
         </a>

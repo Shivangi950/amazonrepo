@@ -28,6 +28,18 @@
         background-color: #222;
         color: #e6e6e6;
     }
+    
+  .coupon{
+    height:300px;
+    width:400px;
+    background-color:lightblue;
+    position:absolute;
+    margin-top:-30%;
+    margin-left:40%;
+    z-index: 100;
+    display:none
+  }
+
 </style>
 
 </head>
@@ -41,7 +53,18 @@
             var element = document.body;
             element.classList.toggle("dark");
             }
-        </script>
+  
+            function loadCoupon(){
+            document.getElementsByClassName('coupon')[0].style.display = 'block';
+            document.getElementById('search').style.opacity='0.7'
+            }
+
+            const closeCoupon = () => {
+            document.getElementsByClassName('coupon')[0].style.display = 'none';
+            document.getElementById('search').style.opacity='1'
+          }
+
+   </script>
     
         <a href="">
             <img src = "images_folder/amazonpic.jpg" height = "50px" width = "100px"/>
@@ -72,7 +95,7 @@
            Shopping made easy| Download the app
         </a>
 
-        <div style="background-color: pink; height: 250px;  ">
+       <div style="background-color: pink; height: 250px;  ">
         <center>
          <p><b> min 50% on  </b></p>
          <p> On Jeans, T-shirts & more</p>
@@ -120,6 +143,12 @@
                 </p>   
 
         </span>
+        
+      <div class="coupon">
+        <div style="float: right;"><button onClick="closeCoupon()">&times;</button></div>
+        <p>Click here for 20% discounts on all products</p>
+     </div>
+
         <span style="background-color: rgb(99, 146, 145); height: 800px; width: 400px">
             Top ticks for your home
             <p>
@@ -228,5 +257,9 @@
         </footer>
         
     </div>
+    
+   <script>
+    window.onload = loadCoupon()
+   </script>
 </body>
 </html>
